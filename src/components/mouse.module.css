@@ -1,0 +1,45 @@
+.mouseText {
+  position: fixed;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.mouseIcon {
+  width: 25px;
+  height: 60px;
+  border: 2px solid #fff;
+  border-radius: 20px;
+  position: fixed;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-bottom: 6px;
+}
+.mouseIcon::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  border-radius: 50%;
+  animation: scroll 2s infinite;
+  display: block;
+}
+
+@keyframes scroll {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, 20px);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, 0);
+  }
+}

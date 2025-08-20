@@ -1,0 +1,39 @@
+.loadingIcon {
+  position: relative;
+  width: 5rem;
+  height: 5rem;
+  border: 3px solid #fff;
+  margin: 0 auto;
+  overflow: hidden;
+  animation: spin 2s ease infinite;
+}
+
+.loadingIcon::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 5em;
+  height: 5em;
+  background-color: #fff;
+  transform-origin: center bottom;
+  transform: scaleY(1);
+  animation: fill 2s linear infinite;
+}
+
+@keyframes spin {
+  50%,
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fill {
+  25%,
+  50% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
